@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a focused improvement that fits the plugin's lightweight scope.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the member or site-owner problem, rather than only the proposed interface.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This can be implemented without overriding MemberPress templates or core files.
+          required: true

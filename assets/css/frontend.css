@@ -1,0 +1,627 @@
+.bmux-account-area,
+.bmux-auth-area,
+.bmux-auth-card {
+	--bmux-primary: #006f80;
+	--bmux-accent: #008da0;
+	--bmux-bg: #f6f8f9;
+	--bmux-text: #17242b;
+	--bmux-muted: #5f6f78;
+	--bmux-border: #ccd7dd;
+	--bmux-soft: #eaf6f8;
+	--bmux-white: #fff;
+	--bmux-danger: #a52626;
+	--bmux-radius: 8px;
+	--bmux-shadow: 0 8px 28px rgba(23, 36, 43, 0.08);
+}
+
+.bmux-account-area *,
+.bmux-auth-card * {
+	box-sizing: border-box;
+}
+
+.bmux-account-area {
+	width: 100%;
+	padding: clamp(16px, 3vw, 32px);
+	border-radius: var(--bmux-radius);
+	background: var(--bmux-bg);
+	color: var(--bmux-text);
+}
+
+.bmux-account-layout {
+	display: grid;
+	grid-template-columns: minmax(220px, 270px) minmax(0, 1fr);
+	gap: clamp(18px, 3vw, 32px);
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.bmux-account-sidebar {
+	align-self: start;
+	overflow: hidden;
+	border: 1px solid var(--bmux-border);
+	border-radius: var(--bmux-radius);
+	background: var(--bmux-white);
+	box-shadow: var(--bmux-shadow);
+}
+
+.bmux-account-user {
+	padding: 24px 22px;
+	border-bottom: 1px solid var(--bmux-border);
+	background: linear-gradient(135deg, var(--bmux-primary), var(--bmux-accent));
+	color: var(--bmux-white);
+}
+
+.bmux-account-user h2 {
+	margin: 0 0 5px;
+	color: inherit;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.bmux-account-user p {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.bmux-account-area #mepr-account-nav {
+	margin: 0;
+	padding: 10px;
+	border: 0;
+	background: transparent;
+}
+
+.bmux-account-area #mepr-account-nav ul {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bmux-account-area #mepr-account-nav li {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+
+.bmux-account-area #mepr-account-nav a {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	width: 100%;
+	min-height: 44px;
+	padding: 10px 12px;
+	border-radius: 6px;
+	color: var(--bmux-text);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.35;
+	text-decoration: none;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+.bmux-account-area #mepr-account-nav a:hover {
+	background: var(--bmux-soft);
+	color: var(--bmux-primary);
+	text-decoration: none;
+}
+
+.bmux-account-area #mepr-account-nav .mepr-active-nav-tab > a,
+.bmux-account-area #mepr-account-nav .active > a,
+.bmux-account-area #mepr-account-nav a[aria-current="page"] {
+	background: var(--bmux-primary);
+	color: var(--bmux-white);
+}
+
+.bmux-account-area #mepr-account-nav a:focus-visible,
+.bmux-account-area a:focus-visible,
+.bmux-account-area button:focus-visible,
+.bmux-account-area input:focus-visible,
+.bmux-account-area select:focus-visible,
+.bmux-account-area textarea:focus-visible,
+.bmux-auth-card a:focus-visible,
+.bmux-auth-card button:focus-visible,
+.bmux-auth-card input:focus-visible {
+	outline: 3px solid var(--bmux-accent);
+	outline: 3px solid color-mix(in srgb, var(--bmux-accent) 45%, transparent);
+	outline-offset: 2px;
+}
+
+.bmux-nav-icon {
+	display: inline-flex;
+	flex: 0 0 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.bmux-nav-icon svg {
+	display: block;
+}
+
+.bmux-account-main {
+	min-width: 0;
+	color: var(--bmux-text);
+}
+
+.bmux-account-main > :first-child,
+.bmux-account-main > :first-child > :first-child {
+	margin-top: 0;
+}
+
+.bmux-account-card {
+	margin: 0 0 20px;
+	padding: clamp(18px, 2.5vw, 26px);
+	border: 1px solid var(--bmux-border);
+	border-radius: var(--bmux-radius);
+	background: var(--bmux-white);
+	box-shadow: var(--bmux-shadow);
+}
+
+.bmux-account-card-title {
+	margin: 0 0 20px;
+	padding: 0 0 13px;
+	border-bottom: 1px solid var(--bmux-border);
+	color: var(--bmux-text);
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 1.35;
+}
+
+.bmux-account-card-body {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px 20px;
+}
+
+.bmux-account-card-body > .mp-form-row {
+	min-width: 0;
+	margin: 0;
+}
+
+.bmux-account-card-body > .mp-form-row:only-child,
+.bmux-account-card-body > .mp-form-row.mepr_mepr-address-one,
+.bmux-account-card-body > .mp-form-row.mepr_mepr-address-two,
+.bmux-account-card-body > .mp-form-row.mepr_mepr-address-country {
+	grid-column: 1 / -1;
+}
+
+.bmux-account-main label,
+.bmux-auth-card label {
+	display: block;
+	margin: 0 0 7px;
+	color: var(--bmux-text);
+	font-size: 14px;
+	font-weight: 650;
+	line-height: 1.4;
+}
+
+.bmux-account-main input[type="text"],
+.bmux-account-main input[type="email"],
+.bmux-account-main input[type="password"],
+.bmux-account-main input[type="tel"],
+.bmux-account-main input[type="url"],
+.bmux-account-main select,
+.bmux-account-main textarea,
+.bmux-auth-card input[type="text"],
+.bmux-auth-card input[type="email"],
+.bmux-auth-card input[type="password"] {
+	width: 100%;
+	min-height: 46px;
+	margin: 0;
+	padding: 10px 12px;
+	border: 1px solid var(--bmux-border);
+	border-radius: 5px;
+	background: var(--bmux-white);
+	box-shadow: none;
+	color: var(--bmux-text);
+	font: inherit;
+	line-height: 1.4;
+	transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.bmux-account-main textarea {
+	min-height: 110px;
+	resize: vertical;
+}
+
+.bmux-account-main input:focus,
+.bmux-account-main select:focus,
+.bmux-account-main textarea:focus,
+.bmux-auth-card input:focus {
+	border-color: var(--bmux-accent);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--bmux-accent) 18%, transparent);
+}
+
+.bmux-form-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px 20px;
+	margin-top: 4px;
+}
+
+.bmux-form-actions .submit {
+	margin: 0;
+	padding: 0;
+}
+
+.bmux-account-main input[type="submit"],
+.bmux-account-main button[type="submit"],
+.bmux-auth-card input[type="submit"],
+.bmux-auth-card button[type="submit"] {
+	min-height: 46px;
+	padding: 11px 20px;
+	border: 1px solid var(--bmux-primary);
+	border-radius: 5px;
+	background: var(--bmux-primary);
+	box-shadow: none;
+	color: var(--bmux-white);
+	font: inherit;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1.3;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.bmux-account-main input[type="submit"]:hover,
+.bmux-account-main button[type="submit"]:hover,
+.bmux-auth-card input[type="submit"]:hover,
+.bmux-auth-card button[type="submit"]:hover {
+	border-color: var(--bmux-accent);
+	background: var(--bmux-accent);
+}
+
+.bmux-change-password-link,
+.bmux-auth-card a {
+	color: var(--bmux-primary);
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.bmux-table-card {
+	overflow-x: auto;
+	padding: 8px;
+}
+
+.bmux-table-card table,
+.bmux-account-main #mepr-account-subscriptions-table,
+.bmux-account-main #mepr-account-payments-table {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	border-collapse: collapse;
+	background: var(--bmux-white);
+}
+
+.bmux-table-card th,
+.bmux-table-card td {
+	padding: 14px 13px;
+	border: 0;
+	border-bottom: 1px solid var(--bmux-border);
+	background: transparent;
+	color: var(--bmux-text);
+	font-size: 14px;
+	line-height: 1.45;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.bmux-table-card th {
+	background: var(--bmux-soft);
+	color: var(--bmux-text);
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.bmux-table-card tr:last-child td {
+	border-bottom: 0;
+}
+
+.bmux-table-card a {
+	color: var(--bmux-primary);
+	font-weight: 600;
+}
+
+.bmux-empty-state {
+	margin: 0 0 20px;
+	padding: 24px;
+	border: 1px dashed var(--bmux-border);
+	border-radius: var(--bmux-radius);
+	background: var(--bmux-white);
+	color: var(--bmux-muted);
+	text-align: center;
+}
+
+.bmux-password-form {
+	max-width: 680px;
+}
+
+.bmux-account-main .mepr_error,
+.bmux-account-main .mepr_updated,
+.bmux-account-main .mp_wrapper .mepr_error,
+.bmux-auth-card .mepr_error,
+.bmux-auth-card .mepr_updated,
+.bmux-auth-card .mepr_message,
+.bmux-auth-card .mp-error,
+.bmux-auth-card .mp-success {
+	margin: 0 0 18px;
+	padding: 12px 14px;
+	border: 1px solid var(--bmux-border);
+	border-left: 4px solid var(--bmux-primary);
+	border-radius: 5px;
+	background: var(--bmux-soft);
+	color: var(--bmux-text);
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.bmux-account-main .mepr_error,
+.bmux-auth-card .mepr_error,
+.bmux-auth-card .mp-error {
+	border-color: #e2b8b8;
+	border-left-color: var(--bmux-danger);
+	background: #fff4f4;
+	color: #752020;
+}
+
+.bmux-auth-area {
+	width: 100%;
+	padding: clamp(20px, 5vw, 56px) clamp(14px, 3vw, 28px);
+	border-radius: var(--bmux-radius);
+	background: var(--bmux-bg);
+}
+
+.bmux-auth-card {
+	width: min(100%, 480px);
+	margin-right: auto;
+	margin-left: auto;
+	padding: clamp(24px, 5vw, 40px);
+	border: 1px solid var(--bmux-border);
+	border-radius: var(--bmux-radius);
+	background: var(--bmux-white);
+	box-shadow: var(--bmux-shadow);
+	color: var(--bmux-text);
+}
+
+.bmux-auth-intro,
+.bmux-reset-heading,
+.bmux-reset-helper {
+	text-align: center;
+}
+
+.bmux-auth-intro {
+	margin-bottom: 26px;
+}
+
+.bmux-auth-intro h2,
+.bmux-reset-heading {
+	margin: 0 0 9px;
+	color: var(--bmux-text);
+	font-size: clamp(24px, 4vw, 30px);
+	font-weight: 750;
+	line-height: 1.25;
+}
+
+.bmux-auth-intro p,
+.bmux-reset-helper {
+	margin: 0;
+	color: var(--bmux-muted);
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.bmux-reset-helper {
+	margin-bottom: 26px;
+}
+
+.bmux-auth-card .mp-form-row {
+	margin: 0 0 18px;
+}
+
+.bmux-auth-card .submit {
+	margin: 22px 0 0;
+	padding: 0;
+}
+
+.bmux-auth-card .submit input,
+.bmux-auth-card .submit button {
+	width: 100%;
+}
+
+.bmux-login-card .mepr_password .mp-hide-pw:not(button) {
+	position: relative;
+}
+
+.bmux-login-card .mepr_password .mp-hide-pw:not(button) input {
+	padding-right: 48px;
+}
+
+.bmux-login-card button.mp-hide-pw {
+	position: absolute;
+	top: 50%;
+	right: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	min-width: 44px;
+	height: calc(100% - 2px);
+	min-height: 0;
+	padding: 0;
+	transform: translateY(-50%);
+	border: 0;
+	border-left: 1px solid var(--bmux-border);
+	border-radius: 0 3px 3px 0;
+	background: #f3f7f8;
+	box-shadow: none;
+	color: var(--bmux-primary);
+	line-height: 1;
+	cursor: pointer;
+}
+
+.bmux-login-card button.mp-hide-pw:hover {
+	background: var(--bmux-soft);
+	color: var(--bmux-primary);
+}
+
+.bmux-login-card button.mp-hide-pw svg,
+.bmux-login-card button.mp-hide-pw .dashicons {
+	margin: 0;
+}
+
+.bmux-remember-row {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	margin: 2px 0 0;
+}
+
+.bmux-remember-row input[type="checkbox"] {
+	flex: 0 0 auto;
+	width: 18px;
+	height: 18px;
+	margin: 0;
+	accent-color: var(--bmux-primary);
+}
+
+.bmux-remember-row label {
+	display: inline;
+	margin: 0;
+	font-weight: 500;
+}
+
+.bmux-auth-actions,
+.bmux-back-to-login {
+	margin: 20px 0 0;
+	color: var(--bmux-muted);
+	font-size: 14px;
+	line-height: 1.55;
+	text-align: center;
+}
+
+@media (max-width: 820px) {
+	.bmux-account-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.bmux-account-area #mepr-account-nav ul {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 680px) {
+	.bmux-account-area {
+		padding: 12px;
+	}
+
+	.bmux-account-card-body {
+		grid-template-columns: 1fr;
+	}
+
+	.bmux-account-card-body > .mp-form-row {
+		grid-column: 1;
+	}
+
+	.bmux-table-card {
+		overflow: visible;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	.bmux-table-card table,
+	.bmux-table-card tbody,
+	.bmux-table-card tr,
+	.bmux-table-card td {
+		display: block;
+		width: 100%;
+	}
+
+	.bmux-table-card thead {
+		position: absolute;
+		overflow: hidden;
+		width: 1px;
+		height: 1px;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+
+	.bmux-table-card tr {
+		margin-bottom: 14px;
+		padding: 8px 14px;
+		border: 1px solid var(--bmux-border);
+		border-radius: var(--bmux-radius);
+		background: var(--bmux-white);
+		box-shadow: 0 4px 16px rgba(23, 36, 43, 0.06);
+	}
+
+	.bmux-table-card td {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 10px 0;
+		text-align: right;
+	}
+
+	.bmux-table-card td::before {
+		flex: 0 0 42%;
+		color: var(--bmux-muted);
+		font-weight: 700;
+		text-align: left;
+		content: attr(data-label);
+	}
+
+	.bmux-table-card td[colspan]::before {
+		display: none;
+	}
+
+	.bmux-table-card td[colspan] {
+		display: block;
+		text-align: left;
+	}
+}
+
+@media (max-width: 460px) {
+	.bmux-account-area #mepr-account-nav ul {
+		display: flex;
+	}
+
+	.bmux-account-card,
+	.bmux-auth-card {
+		padding: 20px 16px;
+	}
+
+	.bmux-form-actions {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.bmux-form-actions .submit,
+	.bmux-form-actions input[type="submit"],
+	.bmux-form-actions button[type="submit"] {
+		width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.bmux-account-area *,
+	.bmux-auth-card * {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}

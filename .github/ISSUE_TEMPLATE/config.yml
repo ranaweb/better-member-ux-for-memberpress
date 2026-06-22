@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: MemberPress product support
+    url: https://memberpress.com/support/
+    about: Use MemberPress support for billing, licensing, restriction rules, and MemberPress core behavior.

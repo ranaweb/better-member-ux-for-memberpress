@@ -1,0 +1,65 @@
+.bmux-settings-wrap {
+	max-width: 920px;
+}
+
+.bmux-settings-wrap > h1 {
+	margin-bottom: 8px;
+}
+
+.bmux-settings-intro {
+	max-width: 720px;
+	margin: 0 0 24px;
+	color: #50575e;
+	font-size: 14px;
+}
+
+.bmux-settings-wrap form {
+	padding: 8px 24px 20px;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.bmux-settings-wrap h2 {
+	margin-top: 24px;
+	padding-top: 24px;
+	border-top: 1px solid #e2e4e7;
+}
+
+.bmux-settings-wrap h2:first-of-type {
+	margin-top: 8px;
+	padding-top: 0;
+	border-top: 0;
+}
+
+.bmux-section-description {
+	max-width: 680px;
+	color: #646970;
+}
+
+.bmux-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.bmux-toggle input {
+	margin: 0;
+}
+
+.bmux-color-field {
+	width: 64px;
+	height: 36px;
+	padding: 2px;
+	border: 1px solid #8c8f94;
+	border-radius: 4px;
+	background: #fff;
+}
+
+@media (max-width: 782px) {
+	.bmux-settings-wrap form {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+}

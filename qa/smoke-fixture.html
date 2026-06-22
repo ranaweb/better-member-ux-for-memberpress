@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Better Member UX smoke fixture</title>
+  <link rel="stylesheet" href="../assets/css/frontend.css">
+</head>
+<body>
+  <main>
+    <article class="entry-content" id="account-fixture">
+      <h1 id="theme-title">Your account</h1>
+      <nav id="mepr-account-nav" aria-label="Account Navigation">
+        <ul>
+          <li class="mepr-nav-item mepr-home mepr-active-nav-tab"><a href="?action=home" id="mepr-account-home">Home</a></li>
+          <li class="mepr-nav-item mepr-subscriptions"><a href="?action=subscriptions" id="mepr-account-subscriptions">Subscriptions</a></li>
+          <li class="mepr-nav-item mepr-payments"><a href="?action=payments" id="mepr-account-payments">Payments</a></li>
+          <li class="mepr-nav-item"><a href="/logout/" id="mepr-account-logout">Logout</a></li>
+        </ul>
+      </nav>
+      <div id="mepr-account-content">
+        <form id="mepr_account_form" action="/save/" method="post">
+          <input type="hidden" name="nonce" value="abc">
+          <div class="mp-form-row mepr_first_name"><label for="first_name">First</label><input id="first_name" name="first_name"></div>
+          <div class="mp-form-row mepr_mepr-address-city"><label for="city">City</label><input id="city" name="city"></div>
+          <div class="mp-form-row mepr_custom_field"><label for="custom">Custom</label><input id="custom" name="custom"></div>
+          <div class="submit"><input type="submit" value="Save"></div>
+          <a href="?action=password" class="mepr-account-change-password">Change password</a>
+        </form>
+        <table id="mepr-account-payments-table">
+          <thead><tr><th>Date</th><th>Amount</th></tr></thead>
+          <tbody><tr><td>Today</td><td>$10</td></tr></tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="entry-content" id="login-fixture">
+      <div class="mp_wrapper mp_login_form">
+        <form id="mepr_loginform" action="/login-handler/" method="post">
+          <div class="mp-form-row mepr_username"><label for="user_login">Username</label><input id="user_login" name="log"></div>
+          <div class="mp-form-row mepr_password"><label for="user_pass">Password</label><div class="mp-hide-pw"><input id="user_pass" type="password" name="pwd"><button type="button" class="mp-hide-pw">Show</button></div></div>
+          <div><input id="rememberme" type="checkbox"><label for="rememberme">Remember Me</label></div>
+          <div class="submit"><input type="submit" value="Log In"></div>
+        </form>
+        <div class="mepr-login-actions"><a href="?action=forgot_password">Forgot Password</a></div>
+      </div>
+    </article>
+
+    <article class="entry-content" id="reset-fixture">
+      <div class="mp_wrapper">
+        <h3>Request a Password Reset</h3>
+        <form id="mepr_forgot_password_form" action="/reset-handler/" method="post">
+          <div class="mp-form-row"><label for="mepr_user_or_email">Email</label><input id="mepr_user_or_email" name="mepr_user_or_email"></div>
+          <input type="hidden" name="nonce" value="xyz">
+          <div class="submit"><input type="submit" value="Request Password Reset"></div>
+        </form>
+      </div>
+    </article>
+  </main>
+  <script>
+    window.BMUXSettings = {
+      enabled: true,
+      enableAccount: true,
+      enableLogin: true,
+      enablePasswordReset: true,
+      renameHome: true,
+      homeLabel: 'Profile',
+      addDashboard: true,
+      dashboardLabel: 'Dashboard',
+      dashboardUrl: '/dashboard/',
+      loginHeading: 'Member Login',
+      loginHelper: 'Sign in to access your membership details and account tools.',
+      passwordResetHelper: 'Reset helper text.',
+      loginUrl: '/login/',
+      memberName: 'Ada Lovelace',
+      strings: {
+        memberAccount: 'Member Account',
+        manageMembership: 'Manage your membership',
+        profileInformation: 'Profile Information',
+        addressDetails: 'Address Details',
+        rememberPassword: 'Remember your password?',
+        returnToLogin: 'Return to the login page.'
+      }
+    };
+  </script>
+  <script src="../assets/js/frontend.js"></script>
+</body>
+</html>
