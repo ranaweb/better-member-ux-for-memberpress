@@ -2,13 +2,13 @@
 Contributors: ranaweb
 Tags: memberpress, membership, login, account, ux
 Requires at least: 6.0
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Improve MemberPress account, login, and password reset pages with cleaner layouts, better navigation, responsive tables, and optional dashboard linking.
+Improve MemberPress account, login, and password reset pages with cleaner navigation, responsive tables, and simple styling controls.
 
 == Description ==
 
@@ -62,6 +62,12 @@ Yes. Account, login, and password reset enhancements can be enabled or disabled 
 4. Plugin settings page.
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Updated WordPress compatibility metadata for version 7.0.
+* Corrected WordPress.org readme metadata and description length.
+* Removed an unused translation directory declaration.
 
 = 1.0.0 =
 
