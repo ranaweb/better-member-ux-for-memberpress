@@ -4,7 +4,7 @@ Tags: memberpress, membership, login, account, ux
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,10 @@ Yes. Account, login, and password reset enhancements can be enabled or disabled 
 4. Plugin settings page.
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Excluded repository-only metadata from installable release packages.
 
 = 1.0.1 =
 
