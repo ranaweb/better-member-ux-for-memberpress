@@ -2,6 +2,10 @@
 
 All notable changes to Better Member UX for MemberPress are documented here.
 
+## 1.0.2 - 2026-06-23
+
+- Excluded `.gitattributes` and all other repository-only metadata from installable release ZIPs.
+
 ## 1.0.1 - 2026-06-22
 
 - Updated the WordPress `Tested up to` value to 7.0.
